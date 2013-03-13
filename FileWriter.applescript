@@ -1,18 +1,20 @@
+-- You can run this for testing
 set theFile to openForWriting("Chrome")
 writeHeader(theFile, "test dt")
 writeLink(theFile, "test dl", "http://husk.org/")
 closeForWriting(theFile)
 
+-- These are the main handlers
 on openForWriting(appName)
-	set iso_date to (current date) as «class isot» as string
-	set iso_date to replace_chars(iso_date, ":", "-")
+	set isoDate to (current date) as «class isot» as string
+	set isoDate to replace_chars(isoDate, ":", "-")
 	
 	set docPath to path to documents folder
 	set docPosixPath to POSIX path of docPath
 	
-	set the_file to docPosixPath & "personal/tabs/" & appName & "_" & iso_date & ".html"
+	set theFile to docPosixPath & "personal/tabs/" & appName & "_" & iso_date & ".html"
 	
-	open for access the_file with write permission
+	open for access theFile with write permission
 	
 	set header to html_header(appName, iso_date)
 	write header to the_file
