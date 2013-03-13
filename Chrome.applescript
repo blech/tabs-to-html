@@ -1,4 +1,5 @@
-property WriteLib : load script POSIX file "/Users/paulmison/Library/Scripts/Libraries/FileWriter.scpt"
+set libPath to path to library folder from user domain as string
+set WriteLib to load script POSIX path of libPath & "Scripts/Libraries/FileWriter.scpt"
 
 tell WriteLib
 	set theFile to openForWriting("Chrome")
