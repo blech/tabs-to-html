@@ -4,28 +4,26 @@ AppleScripts to save out links to all open tabs as an HTML file
 
 ### Notes ###
 
-This is a first pass for my own use. I don't have instructions on how to use it (or binaries), and the HTML is ugly. Still, hopefully it's useful.
+This is a first pass for my own use, so the HTML is fairly ugly. Still, hopefully it's useful.
 
 ### Installation ###
 
-To install, open AppleScript Editor. In Preferences > General, enable 'Show Script menu in the menu bar'. From that menu, select Open Scripts Folder > Open User Scripts Folder.
+Firstly, enable the script menu: open AppleScript Editor and in Preferences > General select 'Enable Script menu bar extra'.
 
-In the opened window, create the folders 'Libraries' and 'Applications'. Inside 'Applications', create folders 'Safari' and 'Google Chrome'.
+Download [the zip file](https://github.com/blech/tabs-to-html/blob/binary/tabs-to-html.zip?raw=true "tabs-to-html.zip, 12kb"). Using the script menu, select Open Scripts Folder > Open User Scripts Folder.
 
-Open the three scripts from this repository, and save:
-* FileWriter.applescript as a compiled script in `~/Library/Scripts/Libraries`
-* Safari.applescript as a compiled script called Open Tabs To HTML in `~/Library/Scripts/Applications/Safari`
-* Chrome.applescript as a compiled script called Open Tabs To HTML in `~/Library/Scripts/Applications/Google Chrome`
+Copy the zip file to this folder, and unzip it. You should end up with an Applications and Libraries folder inside the Scripts folder.
 
-You should then see the option to execute these scripts in the script menu when the appropriate app is being used.
+When you use either Safari or Chrome, you can now use the 'Open Tabs To HTML' item in the script menu to save the current tabs as HTML. The list of tabs will be saved to a dated file in a Personal > Tabs folder within your Documents folder.
 
 ### TODO ###
 
 * ~~Remove path hardcoding~~
 * ~~Write install instructions~~
-* Create binary bundle that you can drop into place
+* ~~Create binary bundle that you can drop into place~~
 * Support OneTab export/import format
 * Styling
+* Select output directory
 
 ### Suggestions ###
 
